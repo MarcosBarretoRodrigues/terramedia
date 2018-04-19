@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Text;
 
 using Server.Network;
+using Server.Translate;
 #endregion
 
 namespace Server.Gumps
@@ -197,7 +198,9 @@ namespace Server.Gumps
 
 		public void AddHtmlLocalized(int x, int y, int width, int height, int number, bool background, bool scrollbar)
 		{
-			Add(new GumpHtmlLocalized(x, y, width, height, number, background, scrollbar));
+            Languages ln = new Languages();
+            this.AddHtml(x, y, width, height, ln.Translate(number), background, scrollbar);
+            //Add(new GumpHtmlLocalized(x, y, width, height, number, background, scrollbar));
 		}
 
 		public void AddHtmlLocalized(
@@ -210,8 +213,10 @@ namespace Server.Gumps
 			bool background,
 			bool scrollbar)
 		{
-			Add(new GumpHtmlLocalized(x, y, width, height, number, color, background, scrollbar));
-		}
+            Languages ln = new Languages();
+            this.AddHtml(x, y, width, height, ln.Translate(number), background, scrollbar);
+            //Add(new GumpHtmlLocalized(x, y, width, height, number, color, background, scrollbar));
+        }
 
 		public void AddHtmlLocalized(
 			int x,
@@ -224,8 +229,10 @@ namespace Server.Gumps
 			bool background,
 			bool scrollbar)
 		{
-			Add(new GumpHtmlLocalized(x, y, width, height, number, args, color, background, scrollbar));
-		}
+            Languages ln = new Languages();
+            this.AddHtml(x, y, width, height, ln.Translate(number), background, scrollbar);
+            //Add(new GumpHtmlLocalized(x, y, width, height, number, args, color, background, scrollbar));
+        }
 
         public void AddImage(int x, int y, int gumpID)
 		{

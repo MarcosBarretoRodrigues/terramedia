@@ -190,12 +190,16 @@
     <Compile Include="Random.cs" />
     <Compile Include="Items\VirtualCheck.cs" />
     <Compile Include="SpawnArea.cs" />
+    <Compile Include="Translate\Languages.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="servuo.ico" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -210,7 +214,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="ServUO.exe.manifest" />
+    <None Include="Translate\Cliloc.json" />
   </ItemGroup>
   <Import Project="..\VersionSpecificSymbols.Common.prop" />
 </Project>
